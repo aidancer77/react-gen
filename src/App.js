@@ -3,12 +3,15 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import barsValue from './bars_value';
-import Bars from './components/Bars/Bars';
-import Graphics from './components/Graphics/Graphics';
-import Groups from './components/Groups/Groups';
-import InfoBox from './components/InfoBox/InfoBox';
-import CheckBox from './components/Checkbox/Checkbox';
 import GasPressure from './components/GasPressure/GasPressure';
+import InfoBox from './components/InfoBox/InfoBox';
+import CheckBox1 from './components/Checkbox/Checkbox1';
+import CheckBox2 from './components/Checkbox/Checkbox2';
+import CheckBox3 from './components/Checkbox/Checkbox3';
+import Bars from './components/Bars/Bars';
+import Groups from './components/Groups/Groups';
+import Graphic1 from './components/Graphics/Graphic1';
+import Graphic2 from './components/Graphics/Graphic2';
 
 function App() {
   return (
@@ -18,21 +21,33 @@ function App() {
           <div className="col-12">
             <div className="row">
               <div className="col-3">
-                <GasPressure></GasPressure>
-                <InfoBox></InfoBox>
+                <div className='row'>
+                  <div className="col-6">
+                    <GasPressure></GasPressure>
+                  </div>
+                  <div className="col-6">
+                    <InfoBox></InfoBox>
+                  </div>
+                </div>
 
                 <div className="row font"> {/*checkbox*/}
-                  <div className="col">
+                  <div className="col-3 w-100">
                     <div className="row height-18 p-2 ps-3 pb-0">
-                      <div className="col-4 border border-secondary border-end-0 bg-white">
-
-                        
+                      <div className="col-4 border border-secondary border-bottom-0 bg-white">
+                        <CheckBox1></CheckBox1>
+                      </div>
+                      <div className="col-4 border-top border-secondary bg-white">
+                        <CheckBox2></CheckBox2>
+                      </div>
+                      <div className="col-4 border border-secondary border-bottom-0 bg-white">
+                        <CheckBox3></CheckBox3>
                       </div>
                     </div>
                   </div>
                 </div>
+
                 <div className="row height-12 p-2 ps-3 pt-0"> {/*<!--cars & volume-->*/}
-                  <div className="col border border-secondary border-top-0 bg-white">
+                  <div className="col border border-secondary bg-white">
                     <div className="row h-30">
                       <div className="d-flex">
                         <div className="d-flex align-items-center w-100 ps-3">
@@ -313,10 +328,10 @@ function App() {
 
               <div className="col-9">
                 <div className="row">
-                  <div className="col-6" id="group_4_zoom">
+                  <div className="col-6" id="group_4_zoom"> {/*<!-- zoom button 4 -->*/}
                     <div className="row height-30 p-2 pt-3" id="h-30_remove4">
                       <div className="col bg-white border border-secondary d-flex flex-column justify-content-between p-0" id="bord-none4">
-                        <div className="d-flex justify-content-center border-bottom border-secondary bg-yellow py-1">Группа 4</div>
+                        <div className="d-flex justify-content-center border-bottom border-secondary py-1">Группа 4</div>
                         <div className="d-flex justify-content-between align-items-center border-top border-secondary p-1">
                           <div className="d-flex justify-content-end ps-2">
                             <div>Общая мощность по группе:</div>
@@ -350,7 +365,7 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="col-6" id="group_5_zoom">
+                  <div className="col-6" id="group_5_zoom"> {/*<!-- zoom button 5 -->*/}
                     <div className="row height-30 p-2 pt-3 pe-3" id="h-30_remove5">
                       <div className="col bg-white border border-secondary d-flex flex-column justify-content-between p-0" id="bord-none5">
                         <div className="d-flex justify-content-center border-bottom border-secondary bg-yellow py-1">Группа 5</div>
@@ -392,7 +407,7 @@ function App() {
                     Шкала 1</div>
                   <div
                     className="col-11 border border-secondary border-start-0 d-flex justify-content-center align-items-center bg-white">
-                    График 1
+                    <Graphic1></Graphic1>
                   </div>
                 </div>
 
@@ -402,7 +417,7 @@ function App() {
                     Шкала 2</div>
                   <div
                     className="col-11 border border-secondary border-start-0 d-flex justify-content-center align-items-center bg-white">
-                    График 2
+                    <Graphic2></Graphic2>
                   </div>
                 </div>
 
@@ -411,7 +426,7 @@ function App() {
           </div>
         </div>
       </div>
-    </main>
+    </main >
   );
 }
 

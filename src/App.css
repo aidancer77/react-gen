@@ -3,3 +3,23 @@
   color: black;
   font-size: large;
 }
+
+.height-12 {
+    height: 12vh;
+}
+
+.height-15 {
+    height: 15.34vh;
+}
+
+.height-18 {
+    height: 18vh;
+}
+
+.height-30 {
+    height: 33.34vh;
+}
+
+.height-54 {
+    height: 54.66vh;
+}
