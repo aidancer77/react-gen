@@ -8,7 +8,9 @@ import InfoBox from './components/InfoBox/InfoBox';
 import CheckBox1 from './components/Checkbox/Checkbox1';
 import CheckBox2 from './components/Checkbox/Checkbox2';
 import CheckBox3 from './components/Checkbox/Checkbox3';
-import Bars from './components/Bars/Bars';
+import BarsPower1 from './components/Bars/BarsPower1';
+import BarsPower2 from './components/Bars/BarsPower2';
+import BarsPower3 from './components/Bars/BarsPower3';
 import Groups from './components/Groups/Groups';
 import Graphic1 from './components/Graphics/Graphic1';
 import Graphic2 from './components/Graphics/Graphic2';
@@ -79,247 +81,20 @@ function App() {
                 <div className="row"> {/*<!--volume scale -->*/}
                   <div className="col">
                     <div className="row height-54 p-2 ps-3 pb-3">
-                      <div className="col border border-secondary border-end-0 bg-white"> {/*<!--bars1-->*/}
-                        <div className="row h-30">
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              4.1</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className="w-100 bg-success d-none checkVol4_1" id="volume4_1"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1435</div>
-                            </div>
-                          </div>
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              4.2</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className="w-100 bg-success d-none checkVol4_2" id="volume4_2"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1437</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="row h-30">
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              4.3</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className="w-100 bg-success d-none checkVol4_3" id="volume4_3"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1418</div>
-                            </div>
-                          </div>
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              4.4</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className="w-100 bg-success d-none checkVol4_4" id="volume4_4"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1441</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="row h-30">
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              4.5</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol4_5" id="volume4_5"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1420</div>
-                            </div>
-                          </div>
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              4.6</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol4_6" id="volume4_6"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1430</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <div className="col border border-secondary bg-white"> {/*<!--bars1-->*/}
+                        <div className="row h-100">
 
-                      <div className="col border border-secondary bg-white"> {/*<!--bars2-->*/}
-                        <div className="row h-30">
                           <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              4.7</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol4_7" id="volume4_7"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1427</div>
-                            </div>
+                            <BarsPower1></BarsPower1>
                           </div>
                           <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              4.8</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol4_8" id="volume4_8"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1435</div>
-                            </div>
+                            <BarsPower2></BarsPower2>
+                          </div>
+                          <div className="col p-2">
+                            <BarsPower3></BarsPower3>
                           </div>
                         </div>
-                        <div className="row h-30">
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              4.9</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol4_9" id="volume4_9"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1439</div>
-                            </div>
-                          </div>
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              4.10</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol4_10" id="volume4_10"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1415</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="row h-30">
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              4.11</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol4_11" id="volume4_11"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1419</div>
-                            </div>
-                          </div>
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              4.12</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol4_12" id="volume4_12"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1430</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
 
-                      <div className="col border border-secondary border-start-0 bg-white"> {/*<!--bars3-->*/}
-                        <div className="row h-30">
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              5.1</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol5_1" id="volume5_1"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1405</div>
-                            </div>
-                          </div>
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              5.2</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol5_2" id="volume5_2"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1421</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="row h-30">
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              5.3</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol5_3" id="volume5_3"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1439</div>
-                            </div>
-                          </div>
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              5.4</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol5_4" id="volume5_4"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1415</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="row h-30">
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              5.5</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol5_5" id="volume5_5"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1423</div>
-                            </div>
-                          </div>
-                          <div className="col p-2">
-                            <div
-                              className="d-flex justify-content-center align-items-center text-decoration-underline fw-bold">
-                              5.6</div>
-                            <div
-                              className="d-flex justify-content-center align-items-end height-70 width-80 border border-5 mx-auto">
-                              <div className=" w-100 bg-success d-none checkVol5_6" id="volume5_6"></div>
-                            </div>
-                            <div>
-                              <div className="d-flex justify-content-center align-items-center pt-1">1419</div>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>

@@ -7,21 +7,19 @@ import strokeChar1 from '../Stroke/strokeChar1';
 function CheckBox1(checkbox_char) {
   return (
     <div className='d-flex flex-direction-row '>
-      <div className="col-4 w-100">
-        <div className="row">
-          <div className="col">
-            <div className=''>
-              {strokeChar1.map(stroke_char1 => (
-                <div key={stroke_char1.id}>
-                  <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value=""/>
-                    <label className="form-check-label">{stroke_char1.checkbox_label}</label>
-                  </div>
-                  <Stroke1 stroke_char1={stroke_char1} />
-                </div>
-              ))}
+      <div className='col-4 w-100'>
+        <div className='row'>
+          {strokeChar1.map(stroke_char1 => (
+            <div key={stroke_char1.id} className='d-flex mx-3 mt-1'>
+              <div className='col-5'>
+                <input className='form-check-input' type='checkbox' value='' />
+                <label className='form-check-label'>{stroke_char1.checkbox_label}</label>
+              </div>
+              <div className='col-7 d-flex justify-content-end'>
+                <Stroke1 stroke_char1={stroke_char1} />
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

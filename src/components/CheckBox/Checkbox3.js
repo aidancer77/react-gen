@@ -9,18 +9,17 @@ function CheckBox3(checkbox_char) {
     <div className='d-flex flex-direction-row '>
       <div className="col-4 w-100">
         <div className="row">
-          <div className="col">
-            <div className="form-check">
-              <input onclick="vol4_1()" className="form-check-input" type="checkbox" value=""
-                id="checkVol4_1" />
-              <label className="form-check-label" for="checkVol4_1">5.1</label>
+          {strokeChar3.map(stroke_char3 => (
+            <div key={stroke_char3.id} className="form-check d-flex mx-3 mt-1">
+              <div className='col-5'>
+                <input className="form-check-input" type="checkbox" value="" />
+                <label className="form-check-label">{stroke_char3.checkbox_label}</label>
+              </div>
+              <div className='col-7 d-flex justify-content-end'>
+                <Stroke3 stroke_char3={stroke_char3} />
+              </div>
             </div>
-          </div>
-          <div className=''>
-            {strokeChar3.map(stroke_char3 => (
-              <Stroke3 key={stroke_char3.id} stroke_char3={stroke_char3} />
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </div>

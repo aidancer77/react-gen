@@ -4,6 +4,10 @@
   font-size: large;
 }
 
+.h-30 {
+    height: 33.33%;
+}
+
 .height-12 {
     height: 12vh;
 }
@@ -22,4 +26,8 @@
 
 .height-54 {
     height: 54.66vh;
+}
+
+.height-70 {
+    height: 70%;
 }
