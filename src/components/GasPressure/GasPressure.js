@@ -10,7 +10,7 @@ function GasPressure(props) {
             class="col d-flex justify-content-center align-items-center bg-light border-bottom">
             Давление газа
           </div>
-          <div class="d-flex justify-content-center align-items-center">Image
+          <div class="d-flex justify-content-center align-items-center ">Image
           </div>
         </div>
       </div>

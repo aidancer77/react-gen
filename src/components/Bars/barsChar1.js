@@ -41,109 +41,43 @@
 //         id: 'bar-4.1',
 //         title: '4.1',
 //         scale: scale4_1,
-//         power: power4_1
+//         power: power4_1,
+        // value: 'value4_1'
 //     },
 //     {
 //         id: 'bar-4.2',
 //         title: '4.2',
 //         scale: scale4_2,
-//         power: power4_2
+//         power: power4_2,
+        // value: 'value4_2'
 //     },
 //     {
 //         id: 'bar-4.3',
 //         title: '4.3',
 //         scale: scale4_3,
-//         power: power4_3
+//         power: power4_3,
+        // value: 'value4_3'
 //     },
 //     {
 //         id: 'bar-4.4',
 //         title: '4.4',
 //         scale: scale4_4,
-//         power: power4_4
+//         power: power4_4,
+        // value: 'value4_4'
 //     },
 //     {
 //         id: 'bar-4.5',
 //         title: '4.5',
 //         scale: scale4_5,
-//         power: power4_5
+//         power: power4_5,
+        // value: 'value4_5'
 //     },
 //     {
 //         id: 'bar-4.6',
 //         title: '4.6',
 //         scale: scale4_6,
-//         power: power4_6
-//     },
-//     {
-//         id: 'bar-4.7',
-//         title: '4.7',
-//         scale: scale4_7,
-//         power: power4_7
-//     },
-//     {
-//         id: 'bar-4.8',
-//         title: '4.8',
-//         scale: scale4_8,
-//         power: power4_8
-//     },
-//     {
-//         id: 'bar-4.9',
-//         title: '4.9',
-//         scale: scale4_9,
-//         power: power4_9
-//     },
-//     {
-//         id: 'bar-4.10',
-//         title: '4.10',
-//         scale: scale4_10,
-//         power: power4_10
-//     },
-//     {
-//         id: 'bar-4.11',
-//         title: '4.11',
-//         scale: scale4_11,
-//         power: power4_11
-//     },
-//     {
-//         id: 'bar-4.12',
-//         title: '4.12',
-//         scale: scale4_12,
-//         power: power4_12
-//     },
-//     {
-//         id: 'bar-5.1',
-//         title: '5.1',
-//         scale: scale5_1,
-//         power: power5_1
-//     },
-//     {
-//         id: 'bar-5.2',
-//         title: '5.2',
-//         scale: scale5_2,
-//         power: power5_2
-//     },
-//     {
-//         id: 'bar-5.3',
-//         title: '5.3',
-//         scale: scale5_3,
-//         power: power5_3
-//     },
-//     {
-//         id: 'bar-5.4',
-//         title: '5.4',
-//         scale: scale5_4,
-//         power: power5_4
-//     },
-//     {
-//         id: 'bar-5.5',
-//         title: '5.5',
-//         scale: scale5_5,
-//         power: power5_5
-//     },
-//     {
-//         id: 'bar-5.6',
-//         title: '5.6',
-//         scale: scale5_6,
-//         power: power5_6
+//         power: power4_6,
+        // value: 'value4_6'
 //     }
 // ]
 
@@ -152,36 +86,42 @@ export default [
         id: 'bar-4.1',
         title: '4.1',
         scale: 'scale4_1',
-        power: 'power4_1'
+        power: '4_1',
+        // value: 'value4_1'
     },
     {
         id: 'bar-4.2',
         title: '4.2',
         scale: 'scale4_2',
-        power: 'power4_2'
+        power: '4_2',
+        // value: 'value4_2'
     },
     {
         id: 'bar-4.3',
         title: '4.3',
         scale: 'scale4_3',
-        power: 'power4_3'
+        power: '4_3',
+        // value: 'value4_3'
     },
     {
         id: 'bar-4.4',
         title: '4.4',
         scale: 'scale4_4',
-        power: 'power4_4'
+        power: '4_4',
+        // value: 'value4_4'
     },
     {
         id: 'bar-4.5',
         title: '4.5',
         scale: 'scale4_5',
-        power: 'power4_5'
+        power: '4_5',
+        // value: 'value4_5'
     },
     {
         id: 'bar-4.6',
         title: '4.6',
         scale: 'scale4_6',
-        power: 'power4_6'
+        power: '4_6',
+        // value: 'value4_6'
     }
 ]

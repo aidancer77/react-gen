@@ -84,17 +84,17 @@ function App() {
                       <div className="col border border-secondary bg-white"> {/*<!--bars1-->*/}
                         <div className="row h-100">
 
-                          <div className="col p-2">
+                          <div className="col-4 p-2">
                             <BarsPower1></BarsPower1>
                           </div>
-                          <div className="col p-2">
+                          <div className="col-4 p-2">
                             <BarsPower2></BarsPower2>
                           </div>
-                          <div className="col p-2">
+                          <div className="col-4 p-2">
                             <BarsPower3></BarsPower3>
                           </div>
+                          
                         </div>
-
                       </div>
                     </div>
                   </div>
