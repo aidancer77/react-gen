@@ -10,11 +10,10 @@ function BarsPowerColumn({ bars_powers }) {
       </div>
 
       <div className="row height-70">
-        <div className={`d-flex justify-content-center align-items-end w-100 border border-5 ${isEvenColumn ? 'px-0' : ''}`}>
+        <div className={`d-flex justify-content-center align-items-end w-100 border border-5 px-0`}>
           <div 
             className={`w-100 bg-success ${item.isVisible ? '' : 'd-none'}`}
-            style={{ height: `${item.scale}%` }}
-          >
+            style={{ height: `${item.scale}%` }}>
           </div>
         </div>
       </div>

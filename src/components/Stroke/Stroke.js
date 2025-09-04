@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Stroke1({ stroke_char1 }) {
+function Stroke({ stroke_char1 }) {
     return (
         <div className="col">
             <svg width="45" height="20">
@@ -12,4 +12,4 @@ function Stroke1({ stroke_char1 }) {
     )
 }
 
-export default Stroke1;
+export default Stroke;

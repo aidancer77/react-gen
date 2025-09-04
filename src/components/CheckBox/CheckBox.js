@@ -1,5 +1,5 @@
 import React from 'react';
-import Stroke1 from '../Stroke/Stroke1';
+import Stroke1 from '../Stroke/Stroke';
 
 function CheckBox({ checkbox, isChecked, onChange }) {
   const handleChange = () => {

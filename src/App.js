@@ -9,18 +9,16 @@ import CheckBoxColumn from './components/CheckBox/CheckBoxColumn';
 import Groups from './components/Groups/Groups';
 import Graphic1 from './components/Graphics/Graphic1';
 import Graphic2 from './components/Graphics/Graphic2';
-
-
-
-
 import BarsPowerColumn from './components/Bars/BarsPowerColumn';
+
+import CheckboxCounter from './CheckboxCounter'
 
 let initialState = {
   items: [
     {
       id: 1,
       checkbox: {
-        isChecked: true,
+        isChecked: false,
         title: '4.1',
         stroke_color: '#0d6efd',
         stroke_width: '2',
@@ -273,14 +271,14 @@ let initialState = {
 }
 function App() {
   const [state, setState] = useState(initialState)
-  
+
   // Функция для обработки изменений чекбоксов
   const handleCheckboxChange = (checkboxId, isChecked) => {
     console.log('Checkbox changed:', checkboxId, isChecked); // Отладочная информация
     setState(prevState => ({
       ...prevState,
-      items: prevState.items.map(item => 
-        item.id === checkboxId 
+      items: prevState.items.map(item =>
+        item.id === checkboxId
           ? { ...item, checkbox: { ...item.checkbox, isChecked } }
           : item
       )
@@ -301,11 +299,11 @@ function App() {
     stroke_width: item.checkbox.stroke_width,
     checked: item.checkbox.isChecked, // Добавляем checked для синхронизации
   }))
-  
+
   console.log('App: checkboxItems:', checkboxItems); // Отладочная информация
   console.log('App: handleCheckboxChange function:', typeof handleCheckboxChange); // Отладочная информация
 
- 
+
   return (
     <main className="main">
       <div className="container-fluid position-absolute h-100">
@@ -326,20 +324,21 @@ function App() {
                   <div className="col-3 w-100">
                     <div className="row height-18 p-2 ps-3 pb-0">
                       <div className="col-4 border border-secondary border-bottom-0 bg-white">
-                        <CheckBoxColumn 
-                          checkboxes={checkboxItems.slice(0, 6)} 
+                        {/* <CheckboxCounter></CheckboxCounter> */}
+                        <CheckBoxColumn
+                          checkboxes={checkboxItems.slice(0, 6)}
                           onCheckboxChange={handleCheckboxChange}
                         />
                       </div>
                       <div className="col-4 border-top border-secondary bg-white">
-                        <CheckBoxColumn 
-                          checkboxes={checkboxItems.slice(6, 12)} 
+                        <CheckBoxColumn
+                          checkboxes={checkboxItems.slice(6, 12)}
                           onCheckboxChange={handleCheckboxChange}
                         />
                       </div>
                       <div className="col-4 border border-secondary border-bottom-0 bg-white">
-                        <CheckBoxColumn 
-                          checkboxes={checkboxItems.slice(12, 18)} 
+                        <CheckBoxColumn
+                          checkboxes={checkboxItems.slice(12, 18)}
                           onCheckboxChange={handleCheckboxChange}
                         />
                       </div>
@@ -354,7 +353,7 @@ function App() {
                         <div className="d-flex align-items-center w-100 ps-3">
                           <div>Количество машин в работе:</div>
                         </div>
-                        <div className="d-flex justify-content-end align-items-center pe-3">10</div>
+                        <div className="d-flex justify-content-end align-items-center pe-3">{1}</div>
                       </div>
                     </div>
                     <div className="row h-30">
@@ -362,7 +361,7 @@ function App() {
                         <div className="d-flex align-items-center w-100 ps-3">
                           <div>Количество машин не в работе:</div>
                         </div>
-                        <div className="d-flex justify-content-end align-items-center pe-3">8</div>
+                        <div className="d-flex justify-content-end align-items-center pe-3">{2}</div>
                       </div>
                     </div>
                     <div className="row h-30">
@@ -377,22 +376,23 @@ function App() {
                   </div>
                 </div>
 
-                <div className="row"> {/*<!--volume scale -->*/}
+                {/*<!--bars1-->*/}
+                <div className="row"> 
                   <div className="col">
                     <div className="row height-54 p-2 ps-3 pb-3">
-                      <div className="col border border-secondary bg-white"> {/*<!--bars1-->*/}
+                      <div className="col border border-secondary bg-white">
                         <div className="row h-100">
 
                           <div className="col-4 p-2">
-                            <BarsPowerColumn bars_powers={barItems.slice(0, 6)}/>
+                            <BarsPowerColumn bars_powers={barItems.slice(0, 6)} />
                           </div>
                           <div className="col-4 p-2">
-                            <BarsPowerColumn bars_powers={barItems.slice(6, 12)}/>
+                            <BarsPowerColumn bars_powers={barItems.slice(6, 12)} />
                           </div>
                           <div className="col-4 p-2">
-                            <BarsPowerColumn bars_powers={barItems.slice(12, 18)}/>
+                            <BarsPowerColumn bars_powers={barItems.slice(12, 18)} />
                           </div>
-                          
+
                         </div>
                       </div>
                     </div>
@@ -401,8 +401,9 @@ function App() {
               </div>
 
               <div className="col-9">
+                {/*zoom button*/}
                 <div className="row">
-                  <div className="col-6" id="group_4_zoom"> {/*<!-- zoom button 4 -->*/}
+                  <div className="col-6" id="group_4_zoom"> 
                     <div className="row height-30 p-2 pt-3" id="h-30_remove4">
                       <div className="col bg-white border border-secondary d-flex flex-column justify-content-between p-0" id="bord-none4">
                         <div className="d-flex justify-content-center border-bottom border-secondary py-1">Группа 4</div>
@@ -439,7 +440,7 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="col-6" id="group_5_zoom"> {/*<!-- zoom button 5 -->*/}
+                  <div className="col-6" id="group_5_zoom"> 
                     <div className="row height-30 p-2 pt-3 pe-3" id="h-30_remove5">
                       <div className="col bg-white border border-secondary d-flex flex-column justify-content-between p-0" id="bord-none5">
                         <div className="d-flex justify-content-center border-bottom border-secondary bg-yellow py-1">Группа 5</div>
