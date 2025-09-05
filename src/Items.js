@@ -1,5 +1,4 @@
-
-let initialState = {
+let InitialState = {
     items: [
         {
             id: 1,
@@ -12,7 +11,7 @@ let initialState = {
             bar: {
                 title: '4.1',
                 scale: 87,
-                power: 23,
+                power: 123,
             }
         },
         {
@@ -250,8 +249,10 @@ let initialState = {
             bar: {
                 title: '4.18',
                 scale: 16,
-                power: 93,
+                power: 150,
             }
         }
     ]
 }
+
+export default InitialState;
