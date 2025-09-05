@@ -47,10 +47,9 @@ function App() {
   const countActive = checkboxItems.filter(item => item.checked).length;
   const countInactive = checkboxItems.filter(item => !item.checked).length;
   const totalPower = barItems.reduce((sum, item) => sum + item.power, 0);
-
-  // console.log('App: checkboxItems:', checkboxItems); // Отладочная информация
-  // console.log('App: barItems:', barItems); // Отладочная информация
-  // console.log('App: handleCheckboxChange function:', typeof handleCheckboxChange); // Отладочная информация
+  
+const powerGroup4 = barItems.slice(0, 12).reduce((sum, item) => sum + item.power, 0);
+const powerGroup5 = barItems.slice(12, 18).reduce((sum, item) => sum + item.power, 0);
 
   return (
     <main className="main">
@@ -117,8 +116,7 @@ function App() {
                         <div className="d-flex align-items-center w-100 ps-3">
                           <div>Общая мощность по объекту:</div>
                         </div>
-
-                        <ThousandSeparator number={totalPower}/>
+                        <ThousandSeparator number={totalPower} />
                       </div>
                     </div>
                   </div>
@@ -158,7 +156,7 @@ function App() {
                         <div className="d-flex justify-content-between align-items-center border-top border-secondary p-1">
                           <div className="d-flex justify-content-end ps-2">
                             <div>Общая мощность по группе:</div>
-                            <div className="px-3 fw-bold">836 кВт</div>
+                            <div className="px-3 fw-bold"><ThousandSeparator number={powerGroup4} /></div>
                           </div>
                           <div>
                             <button className="btn p-1">
@@ -195,7 +193,7 @@ function App() {
                         <div className="d-flex justify-content-between align-items-center border-top border-secondary p-1">
                           <div className="d-flex justify-content-end ps-2">
                             <div>Общая мощность по группе:</div>
-                            <div className="px-3 fw-bold">394 кВт</div>
+                            <div className="px-3 fw-bold"><ThousandSeparator number={powerGroup5} /></div>
                           </div>
                           <div className="p-1">
                             <svg width="25" height="25" id="svg_5_zoom">

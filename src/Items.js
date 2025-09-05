@@ -39,7 +39,7 @@ let InitialState = {
             bar: {
                 title: '4.3',
                 scale: 92,
-                power: 14,
+                power: 114,
             }
         },
         {
@@ -172,12 +172,12 @@ let InitialState = {
             id: 13,
             checkbox: {
                 isChecked: false,
-                title: '4.13',
+                title: '5.1',
                 stroke_color: '#0dcaf0',
                 stroke_width: '2',
             },
             bar: {
-                title: '4.13',
+                title: '5.1',
                 scale: 38,
                 power: 74,
             }
@@ -186,12 +186,12 @@ let InitialState = {
             id: 14,
             checkbox: {
                 isChecked: false,
-                title: '4.14',
+                title: '5.2',
                 stroke_color: '#ffc107',
                 stroke_width: '2',
             },
             bar: {
-                title: '4.14',
+                title: '5.2',
                 scale: 62,
                 power: 89,
             }
@@ -200,12 +200,12 @@ let InitialState = {
             id: 15,
             checkbox: {
                 isChecked: false,
-                title: '4.15',
+                title: '5.3',
                 stroke_color: '#fd7e14',
                 stroke_width: '2',
             },
             bar: {
-                title: '4.15',
+                title: '5.3',
                 scale: 71,
                 power: 26,
             }
@@ -214,12 +214,12 @@ let InitialState = {
             id: 16,
             checkbox: {
                 isChecked: false,
-                title: '4.16',
+                title: '5.4',
                 stroke_color: '#6f42c1',
                 stroke_width: '2',
             },
             bar: {
-                title: '4.16',
+                title: '5.4',
                 scale: 83,
                 power: 55,
             }
@@ -228,12 +228,12 @@ let InitialState = {
             id: 17,
             checkbox: {
                 isChecked: false,
-                title: '4.17',
+                title: '5.5',
                 stroke_color: '#e83e8c',
                 stroke_width: '2',
             },
             bar: {
-                title: '4.17',
+                title: '5.5',
                 scale: 49,
                 power: 77,
             }
@@ -242,12 +242,12 @@ let InitialState = {
             id: 18,
             checkbox: {
                 isChecked: false,
-                title: '4.18',
+                title: '5.6',
                 stroke_color: '#6c757d',
                 stroke_width: '2',
             },
             bar: {
-                title: '4.18',
+                title: '5.6',
                 scale: 16,
                 power: 150,
             }

@@ -5,7 +5,7 @@ function ThousandSeparator({ number }) {
     }
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
   };
-  return <div className="d-flex justify-content-end align-items-center w-50 pe-3">{formatWithSpaces(number)} кВт</div>
+  return <div className="d-flex justify-content-end align-items-center w-50 pe-3">{formatWithSpaces(number)}кВт</div>
 }
 
 export default ThousandSeparator;
