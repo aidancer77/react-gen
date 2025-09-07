@@ -47,9 +47,9 @@ function App() {
   const countActive = checkboxItems.filter(item => item.checked).length;
   const countInactive = checkboxItems.filter(item => !item.checked).length;
   const totalPower = barItems.reduce((sum, item) => sum + item.power, 0);
-  
-const powerGroup4 = barItems.slice(0, 12).reduce((sum, item) => sum + item.power, 0);
-const powerGroup5 = barItems.slice(12, 18).reduce((sum, item) => sum + item.power, 0);
+
+  const powerGroup4 = barItems.slice(0, 12).reduce((sum, item) => sum + item.power, 0);
+  const powerGroup5 = barItems.slice(12, 18).reduce((sum, item) => sum + item.power, 0);
 
   return (
     <main className="main">
@@ -96,24 +96,24 @@ const powerGroup5 = barItems.slice(12, 18).reduce((sum, item) => sum + item.powe
                 <div className="row height-12 p-2 ps-3 pt-0"> {/*<!--cars & volume-->*/}
                   <div className="col border border-secondary bg-white">
                     <div className="row h-30">
-                      <div className="d-flex">
-                        <div className="d-flex align-items-center w-100 ps-3">
+                      <div className="d-flex justify-content-between px-4 w-100">
+                        <div className="d-flex align-items-center">
                           <div>Количество машин в работе:</div>
                         </div>
-                        <div className="d-flex justify-content-end align-items-center pe-3">{countActive}</div>
+                        <div className="d-flex justify-content-end align-items-center">{countActive}</div>
                       </div>
                     </div>
                     <div className="row h-30">
-                      <div className="border border-secondary border-end-0 border-start-0 d-flex">
-                        <div className="d-flex align-items-center w-100 ps-3">
+                      <div className="d-flex justify-content-between px-4 w-100 border border-secondary border-end-0 border-start-0">
+                        <div className="d-flex align-items-center">
                           <div>Количество машин не в работе:</div>
                         </div>
-                        <div className="d-flex justify-content-end align-items-center pe-3">{countInactive}</div>
+                        <div className="d-flex justify-content-end align-items-center">{countInactive}</div>
                       </div>
                     </div>
                     <div className="row h-30">
-                      <div className="d-flex">
-                        <div className="d-flex align-items-center w-100 ps-3">
+                      <div className="d-flex justify-content-between px-4 w-100">
+                        <div className="d-flex align-items-center">
                           <div>Общая мощность по объекту:</div>
                         </div>
                         <ThousandSeparator number={totalPower} />
@@ -154,70 +154,39 @@ const powerGroup5 = barItems.slice(12, 18).reduce((sum, item) => sum + item.powe
                       <div className="col bg-white border border-secondary d-flex flex-column justify-content-between p-0" id="bord-none4">
                         <div className="d-flex justify-content-center border-bottom border-secondary py-1">Группа 4</div>
                         <div className="d-flex justify-content-between align-items-center border-top border-secondary p-1">
-                          <div className="d-flex justify-content-end ps-2">
+                          <div className="d-flex ps-4">
                             <div>Общая мощность по группе:</div>
-                            <div className="px-3 fw-bold"><ThousandSeparator number={powerGroup4} /></div>
+                            <div className="ps-4 fw-bold">
+                              <ThousandSeparator number={powerGroup4} />
+                            </div>
                           </div>
-                          <div>
-                            <button className="btn p-1">
-                              <svg width="25" height="25" id="svg_4_zoom">
-                                <path strokeWidth="2" fill="none" d="
-                                             M 9, 2 L 2,2 L 2, 9
-                                             M 17, 2 L 24,2 L 24, 9
-                                             M 24, 17 L 24,24 L 17, 24
-                                             M 9, 24 L 2,24 L 2, 17" />
-
-                                <path className="d-none" strokeWidth="2" fill="none" d="
-                                             M 7, 2 L 7,7 L 2, 7
-                                             M 19, 2 L 19,7 L 24, 7
-                                             M 24, 19 L 19,19 L 19, 24
-                                             M 7, 24 L 7,19 L 2, 19" />
-                              </svg>
-                            </button>
-                          </div>
+                          <button className='border'>123</button>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="col-6 d-none" id="group_4_hidden">
-                    <div className="row height-30 p-2 pt-3">
-                      <div className="border border-secondary bg-light"></div>
-                    </div>
-                  </div>
+                  {/* <div className="App">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3">
+                      <g fill="#61DAFB">
+                        <path d="M40 78.1z" />
+                      </g>
+                    </svg>
+                  </div> */}
 
                   <div className="col-6" id="group_5_zoom">
                     <div className="row height-30 p-2 pt-3 pe-3" id="h-30_remove5">
                       <div className="col bg-white border border-secondary d-flex flex-column justify-content-between p-0" id="bord-none5">
-                        <div className="d-flex justify-content-center border-bottom border-secondary bg-yellow py-1">Группа 5</div>
-                        <div className="d-flex justify-content-between align-items-center border-top border-secondary p-1">
-                          <div className="d-flex justify-content-end ps-2">
+                        <div className="d-flex justify-content-center border-bottom border-secondary py-1">Группа 5</div>
+                        <div className="d-flex justify-content-start align-items-center border-top border-secondary p-1">
+                          <div className="d-flex ps-4">
                             <div>Общая мощность по группе:</div>
-                            <div className="px-3 fw-bold"><ThousandSeparator number={powerGroup5} /></div>
-                          </div>
-                          <div className="p-1">
-                            <svg width="25" height="25" id="svg_5_zoom">
-                              <path id="svg_open_5" strokeWidth="2" fill="none" d="
-                                             M 9, 2 L 2,2 L 2, 9
-                                             M 17, 2 L 24,2 L 24, 9
-                                             M 24, 17 L 24,24 L 17, 24
-                                             M 9, 24 L 2,24 L 2, 17" />
-
-                              <path className="d-none" id="svg-close_5" strokeWidth="2" fill="none" d="
-                                             M 7, 2 L 7,7 L 2, 7
-                                             M 19, 2 L 19,7 L 24, 7
-                                             M 24, 19 L 19,19 L 19, 24
-                                             M 7, 24 L 7,19 L 2, 19" />
-                            </svg>
+                            <div className="ps-4 fw-bold">
+                              <ThousandSeparator number={powerGroup5} />
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div className="col-6 d-none" id="group_5_hidden">
-                    <div className="row height-30 p-2 pt-3 pe-3">
-                      <div className="border border-secondary bg-light"></div>
                     </div>
                   </div>
                 </div>
