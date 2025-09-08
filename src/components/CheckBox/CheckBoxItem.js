@@ -1,6 +1,6 @@
 
-import React from 'react';
-import InitialState from './InitialState';
+//import React from 'react';
+import InitialState from '../../InitialState';
 
   const checkboxItems = InitialState.items.map(item => ({
     id: item.id,
@@ -10,4 +10,4 @@ import InitialState from './InitialState';
     checked: item.checkbox.isChecked, // Добавляем checked для синхронизации
   }))
   
-  export default ;
+  export default checkboxItems;

@@ -1,16 +1,16 @@
 import React from 'react';
-import ThousandSeparator from 'ThousandSeparator'
-import BarItems from "./BarItem";
-import CheckboxItems from "./CheckboxItems";
+import ThousandSeparator from '../../ThousandSeparator';
+import BarItems from '../Bars/BarItem';
+//import CheckboxItems from './CheckBoxItem';
 
 
 function GroupBoxZoom() {
   
 const powerGroup4 = BarItems.slice(0, 12).reduce((sum, item) => sum + item.power, 0);
-const powerGroup5 = BarItems.slice(12, 18).reduce((sum, item) => sum + item.power, 0);
+//const powerGroup5 = BarItems.slice(12, 18).reduce((sum, item) => sum + item.power, 0);
 
 const h30Remove4 = document.getElementById('h-30_remove4');
-const h30Remove5 = document.getElementById('h-30_remove5');
+//const h30Remove5 = document.getElementById('h-30_remove5');
 
   function clickBtnZoom() {
 

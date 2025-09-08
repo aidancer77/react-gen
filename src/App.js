@@ -10,10 +10,10 @@ import Graphic1 from './components/Graphics/Graphic1';
 import Graphic2 from './components/Graphics/Graphic2';
 import BarsPowerColumn from './components/Bars/BarsPowerColumn';
 import InitialState from './InitialState';
-import ThousandSeparator from 'ThousandSeparator';
-import GroupBoxZoom from './groupBoxZoom';
-import BarItems from './BarItem';
-import CheckboxItems from './CheckBoxItem';
+import ThousandSeparator from './ThousandSeparator';
+import GroupBoxZoom from './components/Groups/groupBoxZoom';
+import BarItems from './components/Bars/BarItem';
+import CheckboxItems from './components/CheckBox/CheckBoxItem';
 
 function App() {
   const [state, setState] = useState(InitialState)
