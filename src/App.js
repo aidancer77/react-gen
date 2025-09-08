@@ -12,8 +12,8 @@ import BarsPowerColumn from './components/Bars/BarsPowerColumn';
 import InitialState from './InitialState';
 import ThousandSeparator from 'ThousandSeparator';
 import GroupBoxZoom from './groupBoxZoom';
-import BarItems from "./BarItem";
-import CheckboxItems from "./CheckboxItems";
+import BarItems from './BarItem';
+import CheckboxItems from './CheckBoxItem';
 
 function App() {
   const [state, setState] = useState(InitialState)
