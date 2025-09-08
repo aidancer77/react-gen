@@ -9,9 +9,11 @@ import CheckBoxColumn from './components/CheckBox/CheckBoxColumn';
 import Graphic1 from './components/Graphics/Graphic1';
 import Graphic2 from './components/Graphics/Graphic2';
 import BarsPowerColumn from './components/Bars/BarsPowerColumn';
-import InitialState from './Items';
-import ThousandSeparator from './ThousandSeparator';
-
+import InitialState from './InitialState';
+import ThousandSeparator from 'ThousandSeparator';
+import GroupBoxZoom from './groupBoxZoom';
+import BarItems from "./BarItem";
+import CheckboxItems from "./CheckboxItems";
 
 function App() {
   const [state, setState] = useState(InitialState)
@@ -29,27 +31,24 @@ function App() {
     }));
   };
 
-  const barItems = state.items.map(item => ({
-    id: item.id,
-    title: item.bar.title,
-    scale: item.bar.scale,
-    power: item.bar.power,
-    isVisible: item.checkbox.isChecked,
-  }))
-  const checkboxItems = state.items.map(item => ({
-    id: item.id,
-    label: item.checkbox.title,
-    stroke_color: item.checkbox.stroke_color,
-    stroke_width: item.checkbox.stroke_width,
-    checked: item.checkbox.isChecked, // Добавляем checked для синхронизации
-  }))
+  // const barItems = state.items.map(item => ({
+  //   id: item.id,
+  //   title: item.bar.title,
+  //   scale: item.bar.scale,
+  //   power: item.bar.power,
+  //   isVisible: item.checkbox.isChecked,
+  // }))
+  // const checkboxItems = state.items.map(item => ({
+  //   id: item.id,
+  //   label: item.checkbox.title,
+  //   stroke_color: item.checkbox.stroke_color,
+  //   stroke_width: item.checkbox.stroke_width,
+  //   checked: item.checkbox.isChecked, // Добавляем checked для синхронизации
+  // }))
 
-  const countActive = checkboxItems.filter(item => item.checked).length;
-  const countInactive = checkboxItems.filter(item => !item.checked).length;
-  const totalPower = barItems.reduce((sum, item) => sum + item.power, 0);
-
-  const powerGroup4 = barItems.slice(0, 12).reduce((sum, item) => sum + item.power, 0);
-  const powerGroup5 = barItems.slice(12, 18).reduce((sum, item) => sum + item.power, 0);
+  const countActive = CheckboxItems.filter(item => item.checked).length;
+  const countInactive = CheckboxItems.filter(item => !item.checked).length;
+  const totalPower = BarItems.reduce((sum, item) => sum + item.power, 0);
 
   return (
     <main className="main">
@@ -73,19 +72,19 @@ function App() {
                       <div className="col-4 border border-secondary border-bottom-0 bg-white">
                         {/* <CheckboxCounter></CheckboxCounter> */}
                         <CheckBoxColumn
-                          checkboxes={checkboxItems.slice(0, 6)}
+                          checkboxes={CheckboxItems.slice(0, 6)}
                           onCheckboxChange={handleCheckboxChange}
                         />
                       </div>
                       <div className="col-4 border-top border-secondary bg-white">
                         <CheckBoxColumn
-                          checkboxes={checkboxItems.slice(6, 12)}
+                          checkboxes={CheckboxItems.slice(6, 12)}
                           onCheckboxChange={handleCheckboxChange}
                         />
                       </div>
                       <div className="col-4 border border-secondary border-bottom-0 bg-white">
                         <CheckBoxColumn
-                          checkboxes={checkboxItems.slice(12, 18)}
+                          checkboxes={CheckboxItems.slice(12, 18)}
                           onCheckboxChange={handleCheckboxChange}
                         />
                       </div>
@@ -130,13 +129,13 @@ function App() {
                         <div className="row h-100">
 
                           <div className="col-4 p-2">
-                            <BarsPowerColumn bars_powers={barItems.slice(0, 6)} />
+                            <BarsPowerColumn bars_powers={BarItems.slice(0, 6)} />
                           </div>
                           <div className="col-4 p-2">
-                            <BarsPowerColumn bars_powers={barItems.slice(6, 12)} />
+                            <BarsPowerColumn bars_powers={BarItems.slice(6, 12)} />
                           </div>
                           <div className="col-4 p-2">
-                            <BarsPowerColumn bars_powers={barItems.slice(12, 18)} />
+                            <BarsPowerColumn bars_powers={BarItems.slice(12, 18)} />
                           </div>
 
                         </div>
@@ -151,42 +150,13 @@ function App() {
                 <div className="row">
                   <div className="col-6" id="group_4_zoom">
                     <div className="row height-30 p-2 pt-3" id="h-30_remove4">
-                      <div className="col bg-white border border-secondary d-flex flex-column justify-content-between p-0" id="bord-none4">
-                        <div className="d-flex justify-content-center border-bottom border-secondary py-1">Группа 4</div>
-                        <div className="d-flex justify-content-between align-items-center border-top border-secondary p-1">
-                          <div className="d-flex ps-4">
-                            <div>Общая мощность по группе:</div>
-                            <div className="ps-4 fw-bold">
-                              <ThousandSeparator number={powerGroup4} />
-                            </div>
-                          </div>
-                          <button className='border'>123</button>
-                        </div>
-                      </div>
+                      <GroupBoxZoom/>
                     </div>
                   </div>
 
-                  {/* <div className="App">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3">
-                      <g fill="#61DAFB">
-                        <path d="M40 78.1z" />
-                      </g>
-                    </svg>
-                  </div> */}
-
                   <div className="col-6" id="group_5_zoom">
                     <div className="row height-30 p-2 pt-3 pe-3" id="h-30_remove5">
-                      <div className="col bg-white border border-secondary d-flex flex-column justify-content-between p-0" id="bord-none5">
-                        <div className="d-flex justify-content-center border-bottom border-secondary py-1">Группа 5</div>
-                        <div className="d-flex justify-content-start align-items-center border-top border-secondary p-1">
-                          <div className="d-flex ps-4">
-                            <div>Общая мощность по группе:</div>
-                            <div className="ps-4 fw-bold">
-                              <ThousandSeparator number={powerGroup5} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <GroupBoxZoom/>
                     </div>
                   </div>
                 </div>

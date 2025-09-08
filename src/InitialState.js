@@ -1,4 +1,4 @@
-let InitialState = {
+const InitialState = {
     items: [
         {
             id: 1,
