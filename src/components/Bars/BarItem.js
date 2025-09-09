@@ -1,6 +1,6 @@
 
 //import React from 'react';
-import InitialState from '../../InitialState';
+import InitialState from '../../data/InitialState';
 
   const barItems = InitialState.items.map(item => ({
     id: item.id,
