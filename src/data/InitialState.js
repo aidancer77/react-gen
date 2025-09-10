@@ -11,9 +11,9 @@ const InitialState = {
       bar: {
         title: '4.1',
         scale: 87,
-        power: 123,
+        power: 23,
       }
-    },
+    }, 
     {
       id: 2,
       checkbox: {
@@ -25,7 +25,7 @@ const InitialState = {
       bar: {
         title: '4.2',
         scale: 45,
-        power: 67,
+        power: 97,
       }
     },
     {
@@ -179,7 +179,7 @@ const InitialState = {
       bar: {
         title: '5.1',
         scale: 38,
-        power: 74,
+        power: 14,
       }
     },
     {
@@ -193,7 +193,7 @@ const InitialState = {
       bar: {
         title: '5.2',
         scale: 62,
-        power: 89,
+        power: 100,
       }
     },
     {

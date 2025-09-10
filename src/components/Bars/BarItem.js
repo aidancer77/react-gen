@@ -10,4 +10,4 @@ import InitialState from '../../data/InitialState';
     isVisible: item.checkbox.isChecked,
   }))
 
-  export default barItems;
+  export default barItems; 

@@ -1,26 +1,19 @@
 import React from 'react';
 import ThousandSeparator from '../../data/ThousandSeparator';
-import BarItems from '../Bars/BarItem';
 
-function GroupBoxZoom({ powerGroup }) {
+function GroupBox({ powerGroup, groupNum }) {
 
-  const h30Remove4 = document.getElementById('h-30_remove4');
+  const groupBoxScale = document.getElementById('groupBoxScale');
   // const h30Remove5 = document.getElementById('h-30_remove5');
 
-  // const groupBoxZoom4 = document.getElementById('group_box_zoom4');
-
-  const powerGroup4 = BarItems.slice(0, 12).reduce((sum, item) => sum + item.power, 0);
-  //const powerGroup5 = BarItems.slice(12, 18).reduce((sum, item) => sum + item.power, 0);
-
   function clickBtnZoom() {
-    if (h30Remove4.classList.contains('height-30')) {
-      console.log(powerGroup4);
-      h30Remove4.classList.remove('height-30');
-      h30Remove4.classList.add('height-54');
+    if (groupBoxScale.classList.contains('d-none')) {
+      groupBoxScale.classList.remove('d-none');
+      // groupBoxScale.classList.add('height-54');
     }
-    else if (h30Remove4.classList.contains('height-54')) {
-      h30Remove4.classList.remove('height-54');
-      h30Remove4.classList.add('height-30');
+    else {
+      // groupBoxScale.classList.remove('height-54');
+      groupBoxScale.classList.add('d-none');
     }
   }
 
@@ -35,10 +28,14 @@ function GroupBoxZoom({ powerGroup }) {
           </div>
         </div>
         <button onClick={clickBtnZoom}>10</button>
+        <div id='groupBoxScale' className='height-80 width-80 bg-white position-absolute top-50 start-50 translate-middle border border-dark d-none d-flex justify-content-end align-items-end'>
+          <button onClick={clickBtnZoom}>10</button>
+        </div>
+
       </div>
     </div>
 
   )
 }
 
-export default GroupBoxZoom;
+export default GroupBox;

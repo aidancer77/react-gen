@@ -2,23 +2,19 @@ import React from 'react';
 import './CheckBox.css';
 import CheckBox from './CheckBox';
 
-function CheckBoxColumn({checkboxes, onCheckboxChange}) {
+function CheckBoxColumn({ checkboxes, onCheckboxChange }) {
   return ( 
-    <div className='d-flex flex-direction-row '>
-      <div className='col-4 w-100'>
-        <div className='row'>
-          {checkboxes.map(checkbox => (
-            <CheckBox
-              key={checkbox.id}
-              checkbox={checkbox}
-              isChecked={checkbox.checked || false}
-              onChange={onCheckboxChange}
-            />
-          ))}
-        </div>
-      </div>
+    <div className='d-flex flex-column'> {/* Изменено на flex-column */}
+      {checkboxes.map(checkbox => (
+        <CheckBox
+          key={checkbox.id}
+          checkbox={checkbox}
+          isChecked={checkbox.checkbox.isChecked} 
+          onChange={onCheckboxChange}
+        />
+      ))}
     </div>
-  )
+  );
 }
 
 export default CheckBoxColumn;

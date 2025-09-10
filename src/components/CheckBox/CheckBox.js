@@ -1,5 +1,5 @@
 import React from 'react';
-import Stroke1 from '../Stroke/Stroke';
+import Stroke from '../Stroke/Stroke';
 
 function CheckBox({ checkbox, isChecked, onChange }) {
   const handleChange = () => {
@@ -14,11 +14,14 @@ function CheckBox({ checkbox, isChecked, onChange }) {
           type='checkbox' 
           checked={isChecked}
           onChange={handleChange}
+          id={`checkbox-${checkbox.id}`}
         />
-        <label className='form-check-label'>{checkbox.label}</label>
+        <label className='form-check-label' htmlFor={`checkbox-${checkbox.id}`}>
+          {checkbox.checkbox.title} {/* Исправлено обращение к title */}
+        </label>
       </div>
       <div className='col-7 d-flex justify-content-end'>
-        <Stroke1 stroke_char1={checkbox} />
+        <Stroke stroke_char1={checkbox.checkbox} /> {/* Исправлено обращение к checkbox */}
       </div>
     </div>
   );

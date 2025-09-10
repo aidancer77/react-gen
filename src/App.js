@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import GasPressure from './components/GasPressure/GasPressure';
 import InfoBox from './components/InfoBox/InfoBox';
-
 import CheckBoxColumn from './components/CheckBox/CheckBoxColumn';
 import Graphic1 from './components/Graphics/Graphic1';
 import Graphic2 from './components/Graphics/Graphic2';
@@ -12,16 +11,13 @@ import BarsPowerColumn from './components/Bars/BarsPowerColumn';
 import InitialState from './data/InitialState';
 import ThousandSeparator from './data/ThousandSeparator';
 import GroupItems from './components/Groups/GroupItem';
-import BarItems from './components/Bars/BarItem';
-import CheckboxItems from './components/CheckBox/CheckBoxItem';
-import GroupBoxZoom from './components/Groups/GroupBoxZoom'; 
+import GroupBox from './components/Groups/GroupBox';
 
 function App() {
   const [state, setState] = useState(InitialState)
 
   // Функция для обработки изменений чекбоксов
   const handleCheckboxChange = (checkboxId, isChecked) => {
-    //console.log('Checkbox changed:', checkboxId, isChecked); // Отладочная информация
     setState(prevState => ({
       ...prevState,
       items: prevState.items.map(item =>
@@ -32,24 +28,9 @@ function App() {
     }));
   };
 
-  // const barItems = state.items.map(item => ({
-  //   id: item.id,
-  //   title: item.bar.title,
-  //   scale: item.bar.scale,
-  //   power: item.bar.power,
-  //   isVisible: item.checkbox.isChecked,
-  // }))
-  // const checkboxItems = state.items.map(item => ({
-  //   id: item.id,
-  //   label: item.checkbox.title,
-  //   stroke_color: item.checkbox.stroke_color,
-  //   stroke_width: item.checkbox.stroke_width,
-  //   checked: item.checkbox.isChecked, // Добавляем checked для синхронизации
-  // }))
-
-  const countActive = CheckboxItems.filter(item => item.checked).length;
-  const countInactive = CheckboxItems.filter(item => !item.checked).length;
-  const totalPower = BarItems.reduce((sum, item) => sum + item.power, 0);
+  const countActive = state.items.filter(item => item.checkbox.isChecked).length;
+  const countInactive = state.items.filter(item => !item.checkbox.isChecked).length;
+  const totalPower = state.items.reduce((sum, item) => sum + item.bar.power, 0);
 
   return (
     <main className="main">
@@ -72,21 +53,20 @@ function App() {
                   <div className="col-3 w-100">
                     <div className="row height-18 p-2 ps-3 pb-0">
                       <div className="col-4 border border-secondary border-bottom-0 bg-white">
-                        {/* <CheckboxCounter></CheckboxCounter> */}
                         <CheckBoxColumn
-                          checkboxes={CheckboxItems.slice(0, 6)}
+                          checkboxes={state.items.slice(0, 6)}
                           onCheckboxChange={handleCheckboxChange}
                         />
                       </div>
                       <div className="col-4 border-top border-secondary bg-white">
                         <CheckBoxColumn
-                          checkboxes={CheckboxItems.slice(6, 12)}
+                          checkboxes={state.items.slice(6, 12)}
                           onCheckboxChange={handleCheckboxChange}
                         />
                       </div>
                       <div className="col-4 border border-secondary border-bottom-0 bg-white">
                         <CheckBoxColumn
-                          checkboxes={CheckboxItems.slice(12, 18)}
+                          checkboxes={state.items.slice(12, 18)}
                           onCheckboxChange={handleCheckboxChange}
                         />
                       </div>
@@ -132,13 +112,13 @@ function App() {
                         <div className="row h-100">
 
                           <div className="col-4 p-2">
-                            <BarsPowerColumn bars_powers={BarItems.slice(0, 6)} />
+                            <BarsPowerColumn bars_powers={state.items.slice(0, 6)} />
                           </div>
                           <div className="col-4 p-2">
-                            <BarsPowerColumn bars_powers={BarItems.slice(6, 12)} />
+                            <BarsPowerColumn bars_powers={state.items.slice(6, 12)} />
                           </div>
                           <div className="col-4 p-2">
-                            <BarsPowerColumn bars_powers={BarItems.slice(12, 18)} />
+                            <BarsPowerColumn bars_powers={state.items.slice(12, 18)} />
                           </div>
 
                         </div>
@@ -153,13 +133,13 @@ function App() {
                 <div className="row" id="group_box_zoom4">
                   <div className="col-6">
                     <div className="row height-30 p-2 pt-3" id="h-30_remove4">
-                      <GroupBoxZoom powerGroup={GroupItems[0].powerGroup} groupNum={GroupItems[0].groupNum} />
+                      <GroupBox powerGroup={GroupItems[0].powerGroup} groupNum={GroupItems[0].groupNum} />
                     </div>
                   </div>
 
                   <div className="col-6" id="group_box_zoom5">
                     <div className="row height-30 p-2 pt-3 pe-3" id="h-30_remove5">
-                      <GroupBoxZoom powerGroup={GroupItems[1].powerGroup} groupNum={GroupItems[1].groupNum} />
+                      <GroupBox powerGroup={GroupItems[1].powerGroup} groupNum={GroupItems[1].groupNum} />
                     </div>
                   </div>
                 </div>
