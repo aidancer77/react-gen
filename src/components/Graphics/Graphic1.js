@@ -1,11 +1,12 @@
 import React from 'react';
-import './Graphics.css';
+import ReactECharts from 'echarts-for-react';  // or var ReactECharts = require('echarts-for-react');
 
-function Graphic1(props) {
-    return (
-        <div className='graphics'>График 1
-        </div>
-    )
-}
-
-export default Graphic1;
+{/* <ReactECharts
+  option={this.getOption()}
+  notMerge={true}
+  lazyUpdate={true}
+  theme={"theme_name"}
+  onChartReady={this.onChartReadyCallback}
+  onEvents={EventsDict}
+  opts={}
+/> */}

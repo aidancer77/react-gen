@@ -4,7 +4,7 @@ import './Bars.css';
 function BarsPowerColumn({ bars_powers }) {
   // Компонент для отдельного элемента
   const BarItem = ({ item }) => (
-    <div key={item.id} className='h-100'>
+    <div key={item.id} className='height-90'>
       <div className='d-flex justify-content-center align-items-center text-decoration-underline fw-bold'>
         {item.bar.title}
       </div>
@@ -30,12 +30,12 @@ function BarsPowerColumn({ bars_powers }) {
 
   return (
     <div className='d-flex justify-content-around'>
-      <div className=''>
+      <div className='width-20'>
         {evenItems.map((item) => (
           <BarItem key={item.id} item={item} />
         ))}
       </div>
-      <div>
+      <div className='width-20'>
         {oddItems.map((item) => (
           <BarItem key={item.id} item={item} />
         ))}

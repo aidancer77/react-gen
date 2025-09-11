@@ -1,5 +1,7 @@
 import React from 'react';
 import ThousandSeparator from '../../data/ThousandSeparator';
+import scaleIcon from '../../images/scale.png';
+import closeIcon from '../../images/close.png';
 
 function GroupBox({ powerGroup, groupNum }) {
 
@@ -27,11 +29,16 @@ function GroupBox({ powerGroup, groupNum }) {
             <ThousandSeparator number={powerGroup} />
           </div>
         </div>
-        <button onClick={clickBtnZoom}>10</button>
-        <div id='groupBoxScale' className='height-80 width-80 bg-white position-absolute top-50 start-50 translate-middle border border-dark d-none d-flex justify-content-end align-items-end'>
-          <button onClick={clickBtnZoom}>10</button>
+        <button onClick={clickBtnZoom} className='d-flex p-1 bg-white btn btn-outline-white'>
+          <img src={scaleIcon} height={24} width={24}></img>
+        </button>
+        <div id='groupBoxScale' className='height-80 width-80 bg-white position-absolute top-50 start-50 translate-middle border border-dark d-none'>
+          <div className='d-flex justify-content-end pt-1 pe-1'>
+            <button onClick={clickBtnZoom} className='p-1 btn btn-outline-light'>
+              <img src={closeIcon} height={24} width={24} className='bg-white'></img>
+            </button>
+          </div>
         </div>
-
       </div>
     </div>
 

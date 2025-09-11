@@ -34,9 +34,10 @@ function App() {
 
   return (
     <main className="main">
-      <div className="container-fluid position-absolute h-100">
+      <div className="container-fluid position-absolute h-100 bg-light">
         <div className="row h-100">
           <div className="col-12">
+            <div className='row height-5'></div>
             <div className="row">
               <div className="col-3">
                 <div className='row'>
@@ -107,10 +108,9 @@ function App() {
                 {/*<!--bars1-->*/}
                 <div className="row">
                   <div className="col">
-                    <div className="row height-54 p-2 ps-3 pb-3">
+                    <div className="row height-50 p-2 ps-3 pb-3">
                       <div className="col border border-secondary bg-white">
                         <div className="row h-100">
-
                           <div className="col-4 p-2">
                             <BarsPowerColumn bars_powers={state.items.slice(0, 6)} />
                           </div>
@@ -120,7 +120,6 @@ function App() {
                           <div className="col-4 p-2">
                             <BarsPowerColumn bars_powers={state.items.slice(12, 18)} />
                           </div>
-
                         </div>
                       </div>
                     </div>
@@ -130,22 +129,22 @@ function App() {
 
               <div className="col-9">
                 {/*zoom button*/}
-                <div className="row" id="group_box_zoom4">
+                <div className="row h-30">
                   <div className="col-6">
-                    <div className="row height-30 p-2 pt-3" id="h-30_remove4">
+                    <div className="row h-100 p-2 pt-3">
                       <GroupBox powerGroup={GroupItems[0].powerGroup} groupNum={GroupItems[0].groupNum} />
                     </div>
                   </div>
 
-                  <div className="col-6" id="group_box_zoom5">
-                    <div className="row height-30 p-2 pt-3 pe-3" id="h-30_remove5">
+                  <div className="col-6">
+                    <div className="row h-100 p-2 pt-3 pe-3">
                       <GroupBox powerGroup={GroupItems[1].powerGroup} groupNum={GroupItems[1].groupNum} />
                     </div>
                   </div>
                 </div>
 
                 {/*<!--graphs-->*/}
-                <div className="row height-30 p-2 pe-3">
+                <div className="row h-30 p-2 pe-3">
                   <div
                     className="col-1 border border-secondary bg-light d-flex justify-content-center align-items-center">
                     Шкала 1</div>
@@ -154,7 +153,7 @@ function App() {
                     <Graphic1></Graphic1>
                   </div>
                 </div>
-                <div className="row height-30 p-2 pb-3 pe-3">
+                <div className="row h-30 p-2 pb-3 pe-3">
                   <div
                     className="col-1 border border-secondary bg-light d-flex justify-content-center align-items-center">
                     Шкала 2</div>
@@ -163,7 +162,6 @@ function App() {
                     <Graphic2></Graphic2>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>

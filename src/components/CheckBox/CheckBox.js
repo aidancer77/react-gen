@@ -21,7 +21,7 @@ function CheckBox({ checkbox, isChecked, onChange }) {
         </label>
       </div>
       <div className='col-7 d-flex justify-content-end'>
-        <Stroke stroke_char1={checkbox.checkbox} /> {/* Исправлено обращение к checkbox */}
+        <Stroke stroke_char={checkbox.checkbox} /> {/* Исправлено обращение к checkbox */}
       </div>
     </div>
   );
