@@ -5,13 +5,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import GasPressure from './components/GasPressure/GasPressure';
 import InfoBox from './components/InfoBox/InfoBox';
 import CheckBoxColumn from './components/CheckBox/CheckBoxColumn';
-import Graphic1 from './components/Graphics/Graphic1';
-import Graphic2 from './components/Graphics/Graphic2';
+import Graphic from './components/Graphics/Graphic';
 import BarsPowerColumn from './components/Bars/BarsPowerColumn';
 import InitialState from './data/InitialState';
 import ThousandSeparator from './data/ThousandSeparator';
 import GroupItems from './components/Groups/GroupItem';
 import GroupBox from './components/Groups/GroupBox';
+import Navigation from './components/Navigation/Navigation';
 
 function App() {
   const [state, setState] = useState(InitialState)
@@ -34,10 +34,12 @@ function App() {
 
   return (
     <main className="main">
-      <div className="container-fluid position-absolute h-100 bg-light">
-        <div className="row h-100">
+      <div className="container-fluid h-100 bg-light">
+        <div className='row height-5'>
+          <Navigation></Navigation>
+        </div>
+        <div className="row height-95">
           <div className="col-12">
-            <div className='row height-5'></div>
             <div className="row">
               <div className="col-3">
                 <div className='row'>
@@ -128,16 +130,16 @@ function App() {
               </div>
 
               <div className="col-9">
-                {/*zoom button*/}
+                {/*groups*/}
                 <div className="row h-30">
                   <div className="col-6">
-                    <div className="row h-100 p-2 pt-3">
+                    <div className="row h-100 p-2">
                       <GroupBox powerGroup={GroupItems[0].powerGroup} groupNum={GroupItems[0].groupNum} />
                     </div>
                   </div>
 
                   <div className="col-6">
-                    <div className="row h-100 p-2 pt-3 pe-3">
+                    <div className="row h-100 p-2 pe-3">
                       <GroupBox powerGroup={GroupItems[1].powerGroup} groupNum={GroupItems[1].groupNum} />
                     </div>
                   </div>
@@ -150,18 +152,20 @@ function App() {
                     Шкала 1</div>
                   <div
                     className="col-11 border border-secondary border-start-0 d-flex justify-content-center align-items-center bg-white">
-                    <Graphic1></Graphic1>
+                    <Graphic></Graphic>
                   </div>
                 </div>
+
                 <div className="row h-30 p-2 pb-3 pe-3">
                   <div
                     className="col-1 border border-secondary bg-light d-flex justify-content-center align-items-center">
                     Шкала 2</div>
                   <div
-                    className="col-11 border border-secondary border-start-0 d-flex justify-content-center align-items-center bg-white">
-                    <Graphic2></Graphic2>
+                    className=" col-11 border border-secondary border-start-0 d-flex justify-content-center align-items-center bg-white">
+                      <Graphic></Graphic>
                   </div>
                 </div>
+                
               </div>
             </div>
           </div>

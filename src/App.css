@@ -32,6 +32,10 @@
     height: 80%;
 }
 
+.height-95 {
+    height: 95vh;
+}
+
 .width-80 {
     width: 80%;
 }
