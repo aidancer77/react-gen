@@ -4,8 +4,8 @@
   font-size: large;
 }
 
-.h-30 {
-    height: 33.33%;
+.h-20 {
+    height: 22.22%;
 }
 
 .height-5 {
@@ -24,8 +24,16 @@
     height: 18vh;
 }
 
+.h-20 {
+    height: 22.22%;
+}
+
 .height-50 {
     height: 50vh;
+}
+
+.h-60 {
+    height: 66.66%;
 }
 
 .height-80 {
